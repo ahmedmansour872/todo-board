@@ -1,0 +1,12 @@
+<mat-dialog-content>
+  <mat-form-field class="example-full-width w-full">
+    <mat-label>{{data.type==type.task?'Please Enter title of task':'Edit your column name'}}</mat-label>
+    <input matInput [(ngModel)]="data.value">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>{{ data.type == type.column || data.isEdit ?
+    'Edit':'Create'
+    }}</button>
+</mat-dialog-actions>
