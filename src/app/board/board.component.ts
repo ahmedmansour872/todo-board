@@ -44,7 +44,6 @@ export class BoardComponent {
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
-    console.log(this.board)
   }
 
   drop(event: any) {
